@@ -1,0 +1,52 @@
+Harshit Dubey : 2586628
+
+Question 1 :What are the request methods in http?
+
+GET: Requests a representation of the specified resource. GET requests should only retrieve data and not modify it.
+
+POST: Submits data to be processed to a specified resource. The data is included in the body of the request, and this method is often used when uploading a file or submitting a form.
+
+PUT: Updates a resource or creates a new resource if it doesn't exist at the specified URL. The entire representation of the resource is replaced with the request payload.
+
+PATCH: Partially updates a resource. The request typically contains only the changes to be applied, rather than the entire updated representation.
+
+DELETE: Deletes the specified resource.
+
+Few other Requests are :  
+
+HEAD: Similar to GET but requests the headers only, without the actual data. It's often used to check if a resource has been modified since a certain date.
+
+OPTIONS: Describes the communication options for the target resource. It's often used to retrieve information about the allowed methods or other configuration details.
+
+TRACE: Echoes the received request back to the sender. It's mainly used for diagnostic purposes.
+
+CONNECT: Establishes a tunnel to the server identified by the target resource. It is often used for SSL/TLS connections to a proxy.
+
+
+
+
+Question 2  : Diff between GET and POST ? 
+
+
+Get :  In case of Get request, only limited amount of data can be sent because data is sent in header.
+Post : In case of post request, large amount of data can be sent because data is sent in body.
+
+
+Get :  Get request is not secured because data is exposed in URL bar.
+Post : Post request is secured because data is not exposed in URL bar.
+
+Get : Get request can be bookmarked.
+POSt : Post request cannot be bookmarked.
+
+Get : Get request is idempotent . It means second request will be ignored until response of first request is delivered
+Post : Post request is non-idempotent.
+
+
+GET : Get request is more efficient and used more than Post.
+POST : Post request is less efficient and used less than get.
+
+
+Question 3 : How to send the files as response in express js?
+
+
+In Express.js, We can send files as responses using the res.sendFile() 
