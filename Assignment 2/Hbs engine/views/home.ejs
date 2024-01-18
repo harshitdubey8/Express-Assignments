@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <h1>Welcome to Homepage</h1>
+    <hr />
+    <div class="main_div">
+      <% for(let index of deptsArray) { %>
+
+      <div class="user_card">
+        <img src="<%= index.avatar %>" alt="g" />
+        <strong style="color: black">
+          <%= index.first_name %> <%= index.last_name %>
+        </strong>
+        <p><%= index.email %></p>
+      </div>
+
+      <% } %>
+    </div>
+
+    <!-- <a href="login"> Go to Login page </a> -->
+
+    <!-- array -->
+  </body>
+</html>

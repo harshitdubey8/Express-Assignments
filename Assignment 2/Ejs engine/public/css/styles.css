@@ -1,0 +1,32 @@
+img {
+  height: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  font-size: 24px;
+}
+
+.main_div {
+  display: flex;
+  gap: 20px;
+}
+.user_card {
+  border-radius: 12px;
+  border-style: outset;
+
+  padding: 56px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user_card img {
+  width: 100px;
+  height: 100px;
+}

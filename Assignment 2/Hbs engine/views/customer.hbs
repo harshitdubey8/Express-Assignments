@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style>
+        div {
+            border: 1px solid gray;
+            border-top-width: 20px;
+            padding: 5px;
+            width: 500px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        div h3 {
+            color: white;
+            text-align: center;
+            margin: 0px;
+            margin-top: -25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h3>Array of Objects</h3>
+
+        <table border="2" width="400" cellspacing="0" cellpadding="5">
+
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Country</th>
+            </tr>
+
+
+            {{#each userArray}}
+            <tr>
+                <td> {{this.Name}} </td>
+                <td> {{this.City}} </td>
+                <td> {{this.Country}} </td>
+            </tr>
+            {{/each}}
+
+        </table>
+    </div>
+
+</body>
+
+</html>

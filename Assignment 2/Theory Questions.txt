@@ -1,0 +1,8 @@
+Question 3 : purpose of app.use()
+
+app.use has several purposes: 
+
+* app.use can allows the incorporation of middleware functions into the express app
+* Facilitates serving static files (e.g., images, stylesheets) using middleware functions like express.static.
+* Allows the incorporation of routers into specific paths, enabling modular route handling.
+* Enables the integration of third-party middleware packages that enhance the functionality of the Express application.
