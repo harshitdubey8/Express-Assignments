@@ -6,3 +6,58 @@ app.use has several purposes:
 * Facilitates serving static files (e.g., images, stylesheets) using middleware functions like express.static.
 * Allows the incorporation of routers into specific paths, enabling modular route handling.
 * Enables the integration of third-party middleware packages that enhance the functionality of the Express application.
+
+
+Question 4
+
+The app.method is a family of methods used for defining routes and handling http requests specific
+(e.g., app.get(), app.delete(), app.post(), app.put() )
+
+
+Question 5 
+We can access them using the req.query object 
+
+Question 6 
+
+step 1 : npm install body-parser
+step 2 : const bodyParser = require('body-parser');
+
+step 3 : app.use(bodyParser.json());
+
+step 4 : app.post('/login', (req, res) => {
+
+  const postData = req.body;
+
+});
+
+
+
+Question 7
+
+* Find method  : It returns the value of the first element that matches the criteria, 
+
+const numbers = [1, 2, 3, 4, 5];
+
+const result = numbers.find(element => element > 2);
+
+console.log(result);  // this will return 3
+
+This returns undefined is found nothing
+
+
+* Find Index   method is similar to find(), but it returns the index of the first element that satisfies the testing function, or -1 if no such element is found.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const index = numbers.findIndex(element => element > 2);
+
+console.log(index); // Output: 2 (index of the first element greater than 2)
+
+
+* Filter  :  creates a new array with all elements that pass the provided testing function. It returns a new array containing the elements for which the testing function returns true.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const filteredNumbers = numbers.filter(element => element % 2 === 0);
+
+console.log(filteredNumbers); // Output: [2, 4] (even numbers)
