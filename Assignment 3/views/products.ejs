@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>HomePage</title>
+
+
+    <style> 
+                .errorMessage{
+                    color : red
+                }
+
+                p, input {
+                    font-size: 16px;
+                }
+
+                .product-div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                form ,fieldset{
+                    display: flex;
+                    flex-direction: column;
+                    width: 500px;
+                    gap: 10px;
+                }
+                
+                button {
+                    font-size: 16px;
+                    width: fit-content;
+                    padding: 10px;
+                    align-self: center;
+                }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Products Page</h1>
+    <hr />
+
+    <div class="product-div">
+      <fieldset>
+        <form action="products" method="POST">
+        <legend>Enter Product details</legend>
+        Product name <input type="text" name="t1" /> Product quantity<input
+          type="text"
+          name="t2"
+        />
+        Product price <input type="text" name="t3" />
+        <button type="submit">Submit</button>
+  
+        <p class="errorMessage"><%=errorMessage %> </p>
+                <% if(totalAmt != null) { %>
+                  
+
+        <p> The Total amount Will be <%= totalAmt %></p>
+                <%} %>
+      </fieldset>
+    </form>
+    </div>
+      <a href="/"> Go to home </a>
+    <!-- array -->
+  </body>
+</html>

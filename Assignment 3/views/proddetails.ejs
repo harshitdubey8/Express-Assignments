@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+      div {
+        border: 1px solid gray;
+        border-top-width: 20px;
+        padding: 5px;
+        width: 500px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      div h3 {
+        color: white;
+        text-align: center;
+        margin: 0px;
+        margin-top: -25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to Products details page</h1>
+    <hr />
+    <div>
+      <h3>Selected Product Details</h3>
+      product Name : <%=prodObj.pname%> <br />
+      product quantity : <%=prodObj.quantity%> <br />
+      product price : <%=prodObj.price%> <br />
+      product Category : <%=prodObj.category%> <br />
+    </div>
+
+    <hr />
+    <a href="/">Back to Home</a> |
+    <a href="/prod/allproducts"> Show All Products </a>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <style>
+      div {
+        border: 1px solid gray;
+        border-top-width: 20px;
+        padding: 5px;
+        width: 500px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      div h3 {
+        color: white;
+        text-align: center;
+        margin: 0px;
+        margin-top: -25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to Product based on Category selected</h1>
+    <hr />
+    <div>
+      <h3>Category wise</h3>
+
+      <table border="2" width="400" cellspacing="0" cellpadding="5">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>quantity</th>
+          <th>Category</th>
+          <th>Details</th>
+        </tr>
+
+        <% for(let item of prodArray) { %>
+
+        <tr>
+          <td><%=item.pname%></td>
+          <td><%=item.price%></td>
+          <td><%=item.quantity%></td>
+          <td><%=item.category%></td>
+          <td>
+            <a href="/prod/getproductDetails?dno=<%=item.pid%>">Details</a>
+          </td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>
