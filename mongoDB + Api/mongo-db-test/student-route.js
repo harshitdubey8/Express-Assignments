@@ -20,9 +20,20 @@ router.get("/stud", async function (req, res) {
 // Read Single
 router.get("/stud/:id", async function (req, res) {
   var dno = req.params.id;
-  let result = await StudentModel.findOne({ Rollno: dno }, { _id: 0 });
-  console.log("[Read Single] - " + JSON.stringify(result));
-  res.send(result);
+  try {
+    let result = await StudentModel.findOne({ Rollno: dno }, { _id: 0 });
+
+    if (result) {
+      console.log("[Read Single] - " + JSON.stringify(result));
+      res.send(result);
+    } else {
+      console.log("[Read Single] - Record not found");
+      res.status(404).send("Record not found");
+    }
+  } catch (error) {
+    console.error("[Read Single] - Error: " + error.message);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 // Create
@@ -64,12 +75,22 @@ router.put("/stud", async function (req, res) {
 // Delete
 router.delete("/stud/:id", async function (req, res) {
   var dno = req.params.id;
-  let resResult = await StudentModel.findOneAndDelete({ Rollno: dno });
+  try {
+    let resResult = await StudentModel.findOneAndDelete({ Rollno: dno });
 
-  var result = {};
-  result.status = "Record deleted from Database";
-  console.log("[Delete] - Record deleted from Database");
-  res.send(result);
+    if (resResult) {
+      var result = {};
+      result.status = "Record deleted from Database";
+      console.log("[Delete] - Record deleted from Database");
+      res.send(result);
+    } else {
+      console.log("[Delete] - Record not found in Database");
+      res.status(404).send("Record not found in Database");
+    }
+  } catch (error) {
+    console.error("[Delete] - Error: " + error.message);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 module.exports = router;

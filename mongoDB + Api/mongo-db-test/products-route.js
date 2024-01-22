@@ -19,10 +19,21 @@ router.get("/prod", async function (req, res) {
 
 // Read Single
 router.get("/prod/:id", async function (req, res) {
-  var dno = req.params.id;
-  let result = await ProductModel.findById(dno);
-  console.log("[Read Single] - " + JSON.stringify(result));
-  res.send(result);
+  var productId = req.params.id;
+  try {
+    let result = await ProductModel.findById(productId);
+
+    if (result) {
+      console.log("[Read Single] - " + JSON.stringify(result));
+      res.send(result);
+    } else {
+      console.log("[Read Single] - Product not found");
+      res.status(404).send("Product not found");
+    }
+  } catch (error) {
+    console.error("[Read Single] - Error: " + error.message);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 // Create
@@ -54,13 +65,23 @@ router.put("/prod/:id", async function (req, res) {
 
 // Delete
 router.delete("/prod/:id", async function (req, res) {
-  var dno = req.params.id;
-  let resResult = await ProductModel.findByIdAndDelete(dno);
+  var productId = req.params.id;
+  try {
+    let resResult = await ProductModel.findByIdAndDelete(productId);
 
-  var result = {};
-  result.status = "Record deleted from Database";
-  console.log("[Delete] - Record deleted from Database");
-  res.send(result);
+    if (resResult) {
+      var result = {};
+      result.status = "Record deleted from Database";
+      console.log("[Delete] - Record deleted from Database");
+      res.send(result);
+    } else {
+      console.log("[Delete] - Product not found in Database");
+      res.status(404).send("Product not found in Database");
+    }
+  } catch (error) {
+    console.error("[Delete] - Error: " + error.message);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 module.exports = router;
