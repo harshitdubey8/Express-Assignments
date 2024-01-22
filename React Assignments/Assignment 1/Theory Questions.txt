@@ -1,0 +1,17 @@
+Q3 
+
+* Keys in react play a crucial Role when it comes to differentiating Items
+* They help us uniquely Identify items 
+* Prevent unnecessary Rendering
+* The key attribute helps React efficiently update the DOM by identifying which items have changed.
+
+
+Q4
+
+By importing the image and storing its path in a variable 
+ const imageUrl = 'path/to/your/image.jpg';
+
+then using the img tag giving the same variable as src in the return statement
+
+     <img src={imageUrl} alt="Description of the image" />
+
