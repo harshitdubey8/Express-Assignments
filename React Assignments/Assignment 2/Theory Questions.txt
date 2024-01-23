@@ -1,0 +1,1 @@
+Q 5 State is internal to a component, mutable, and owned by the component itself. Props are external data passed from a parent component, immutable, and owned by the parent. Both state and props are crucial concepts for managing and passing data in React applications.
