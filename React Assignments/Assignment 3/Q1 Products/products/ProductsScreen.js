@@ -7,14 +7,14 @@ function ProductsScreen() {
 
   return (
     <div className="ProductsScreen">
-      <h3>Search for the category to see the products</h3>
+      <h3>Select the Category</h3>
       <div className="Input">
-        <input
-          type="text"
-          value={category}
-          placeholder="Enter category"
-          onChange={(e) => setCategory(e.target.value)}
-        />
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="">Select Category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Appliances">Appliances</option>
+          <option value="Clothing">Clothing</option>
+        </select>
       </div>
 
       <div>
