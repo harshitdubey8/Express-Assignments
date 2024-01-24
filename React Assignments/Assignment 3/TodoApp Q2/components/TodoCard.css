@@ -1,0 +1,25 @@
+.TodoCard {
+  display: flex;
+  width: 500px;
+  height: fit-content;
+  padding: 10px;
+  background-color: #40a2d8;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 13px;
+  margin-top: 10px;
+}
+
+.DeleteButton {
+  border: none;
+
+  background-color: #ff6868;
+  color: white;
+  height: 35px;
+  width: 100px;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+}

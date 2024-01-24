@@ -1,0 +1,6 @@
+3 : 
+Regular Expressions  in JavaScript are patterns used to match character combinations in strings. They provide a powerful and flexible way to search, match, and manipulate text. Regular expressions are often used for tasks such as validation, searching, and replacing substrings within strings.
+
+Here are some common use cases for regular expressions in JavaScript
+
+eg const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
