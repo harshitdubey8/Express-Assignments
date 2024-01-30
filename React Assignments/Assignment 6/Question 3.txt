@@ -1,0 +1,35 @@
+Question 3 
+
+
+1. Mounting Phase
+constructor()
+The first method called when a component is created.
+Used for initializing state and binding event handlers.
+
+render()
+Renders the component UI.
+Must be a pure function without side effects.
+
+
+componentDidMount()
+Invoked immediately after a component and its children have been rendered to the DOM.
+Used for initiating API requests, subscriptions, or setting up timers.
+
+2. Updating Phase
+
+shouldComponentUpdate()
+Determines if the component should re-render.
+Used for performance optimization.
+Default behavior is to always re-render.
+
+componentDidUpdate()
+Invoked after the component is re-rendered.
+Used for performing actions after a component update.
+
+
+3. Unmounting Phase
+
+
+componentWillUnmount()
+Invoked immediately before a component is unmounted and destroyed.
+Used for cleanup tasks such as canceling network requests or clearing timers
