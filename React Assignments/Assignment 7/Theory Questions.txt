@@ -1,0 +1,32 @@
+question 3 : 
+
+
+Unit testing is a software testing technique in which individual units or components of a software application are tested in isolation from the rest of the system.
+
+Reasons why we perform unit testing : 
+
+Early Detection of Bugs:
+
+
+
+Improved Code Quality:
+
+
+Documentation:
+
+
+Supports Continuous Integration:
+
+
+Reduces Debugging Time:
+
+
+
+
+
+
+question 4  : For JS/TS
+
+Jest: A widely used testing framework developed by Facebook. It is known for its simplicity, speed, and the ability to run tests in parallel.
+Mocha: A flexible testing framework that supports asynchronous testing and various assertion libraries.
+Jasmine: A behavior-driven development (BDD) framework for testing JavaScript code. It provides a clean syntax for writing tests.
